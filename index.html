@@ -70,9 +70,10 @@
 
 		function randomise() {
 			starfield.stop();
-			starfield.stars = Math.random()*1000 + 50;
-			starfield.minVelocity = Math.random()*30+5;
-			starfield.maxVelocity = Math.random()*50 + starfield.minVelocity;			
+			// These lines should not be necessary, but randomise() doesn't work without them unless bug in starfield.js is fixed.
+			//starfield.stars = Math.random()*1000 + 50;
+			//starfield.minVelocity = Math.random()*30+5;
+			//starfield.maxVelocity = Math.random()*50 + starfield.minVelocity;			
 			starfield.start();
 		}
 	</script>

@@ -11,7 +11,8 @@ function Starfield() {
 	this.width = 0;
 	this.minVelocity = 15;
 	this.maxVelocity = 30;
-	this.stars = 100;
+	this.starNum = 100  // starNum should be different from stars
+	this.stars = 100;	// before they were using stars as an int, then using stars as the array of stars...  
 	this.intervalId = 0;
 }
 
@@ -44,7 +45,7 @@ Starfield.prototype.start = function() {
 
 	//	Create the stars.
 	var stars = [];
-	for(var i=0; i<this.stars; i++) {
+	for(var i=0; i<this.starNum; i++) {
 		stars[i] = new Star(Math.random()*this.width, Math.random()*this.height, Math.random()*3+1,
 		 (Math.random()*(this.maxVelocity - this.minVelocity))+this.minVelocity);
 	}
